@@ -26,6 +26,7 @@ class FinapiEmbeddableWebForm {
     startWebFormComponents() {
         console.log("Injecting the entry point")
         const entryPoint = this.ownerDocument.createElement('script');
+        entryPoint.setAttribute("id", "web-form-components-source");
         entryPoint.src = this.webComponentsEntryPointUrl;
         entryPoint.async = false;
 
